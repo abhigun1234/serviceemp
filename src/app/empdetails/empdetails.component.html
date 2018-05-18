@@ -1,0 +1,14 @@
+<button (click)="getEmpDetails()"> get All Emp details</button>
+
+<ul>
+
+  <li *ngFor="let emp of empdetails">
+
+
+    {{emp.id}}
+   
+   {{emp.name}}
+
+   {{emp.gender}}
+  </li>
+</ul>
