@@ -1,7 +1,10 @@
-<p>
-  greet works!
-</p>
-<button (click)="greet()">greet</button>
+<button (click) = "getUser()">search</button>
+{{searchCount}}
+<ol *ngIf="serchResult">
+<li *ngFor = "let user of serchResult.items" >
+  {{user.login}}
+  
+</li>
 
-<p>{{id}}</p>
-<p>{{content}}</p>
+  
+</ol>

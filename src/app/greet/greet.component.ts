@@ -9,6 +9,8 @@ import {GreetService} from '..//greet.service';
 export class GreetComponent implements OnInit {
  public id;
   public content;
+  serchResult;
+   searchCount;
   constructor(private greetservice: GreetService) { }
 
   ngOnInit() {
@@ -22,5 +24,11 @@ export class GreetComponent implements OnInit {
 
     });
   }
-
+  getUser() {
+     this.greetservice.search().subscribe(res => {
+       console.log(res);
+       this.serchResult = res;
+       this.searchCount = res.total_count;
+      });
+}
 }
